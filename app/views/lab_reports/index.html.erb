@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lab reports</h1>
+<%= link_to "New lab report", new_lab_report_path %>
+
+<table id="lab_reports">
+  <thead>
+  <th>User</th>
+  <th>Title</th>
+  <th>Description</th>
+  <th>Grade</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <% @lab_reports.each do |lab_report| %>
+    <tr>
+      <td><%=lab_report.User_id %></td>
+      <td><%=lab_report.Title %></td>
+      <td><%=lab_report.Description %></td>
+      <td><%=lab_report.Grade %></td>
+      <td><%= link_to "Show this lab_report", lab_report %></td>
+    </tr>
+  <%end %>>
+  </tbody>
+</table>
+
